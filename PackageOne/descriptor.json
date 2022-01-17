@@ -1,0 +1,16 @@
+﻿{
+  "Descriptor": {
+    "UId": "b46a833b-61d0-e710-a399-71416e675662",
+    "Name": "PackageOne",
+    "ModifiedOnUtc": "\/Date(1642436356000)\/",
+    "Maintainer": "Customer",
+    "Description": "https://github.com/Academy-Creatio/JanTraining",
+    "DependsOn": [
+      {
+        "UId": "2fabaf6c-0f92-4530-aef8-40345c021da2",
+        "PackageVersion": "7.8.0",
+        "Name": "ProductCore"
+      }
+    ]
+  }
+}
