@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PackageTwo.Interfaces</name>
+    </assembly>
+    <members>
+        <member name="M:PackageTwo.Interfaces.ICalculator.Add(System.Int32,System.Int32)">
+            <summary>
+            Adds two numbers
+            </summary>
+            <param name="a">Number one</param>
+            <param name="b">Number two</param>
+            <returns></returns>
+        </member>
+        <member name="M:PackageTwo.Interfaces.ICalculator.Sub(System.Int32,System.Int32)">
+            <summary>
+            Subtracts B from A
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
