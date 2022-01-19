@@ -41,7 +41,7 @@ namespace WorkshopWorkingWithData.Files.DataOperations
                 .Set("Id",Column.Parameter(ContactId))
                 .Set("Name", Column.Parameter(Name))
                 .Set("Email", Column.Parameter($"{Name}@creatio.com"))
-                .Into(tableName) as Insert;
+                .Into(tableName);
 
             return insert.Execute();
         }

@@ -28,8 +28,8 @@
 |:--:|:--:|
 |1|[Video][d1v]|
 |2|[Video][d2v]|
-<!-- 
 |3|[Video][d3v]|
+<!-- 
 |4|[Video][d4v]|
 |5|[Video][d5v]|
 |6|[Video][d6v]|
@@ -53,7 +53,7 @@ Thank you for having taken development training with me. In order to make this c
 <!-- Named Links -->
 [d1v]: https://creatio-global.zoom.us/rec/share/mguCV2lBkVHU7biDNCv-lxJwkzMZlJWduUo1MrCzJ0E0fI0E_4gHx6XoxjTkBmZX.PLdppQx9EIxvAnyl
 [d2v]: https://creatio-global.zoom.us/rec/share/oaFj7XNZ8wBQjR1nGcbLaEdA0L40Qj5BL-hFkT4GtFgVkWQvNVHcvLBWhRS2MtYk.RUnarBk5niW6s9T0
-
+[d3v]:https://creatio-global.zoom.us/rec/share/Jk8h0pGB6qQlsXNGOBG-VRkgm8WKjgiDJ48f6bVRLlttELBlpSlAPuxD4ZBm83UU.qeIuZTT7dHbruUlJ
 <!-- Links -->
 [clio]:https://github.com/Advance-Technologies-Foundation/clio
 [fsmode]:https://github.com/Academy-Creatio/TrainingProgramm/wiki/Enable-development-in-FileSystem-Mode

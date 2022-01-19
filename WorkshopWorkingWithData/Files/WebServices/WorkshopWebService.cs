@@ -74,7 +74,7 @@ namespace WorkshopWorkingWithData
         [WebInvoke(Method = "GET", BodyStyle = WebMessageBodyStyle.Bare, RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Xml)]
         public Stream GetFilteredContacts(QuryType qt, string email)
         {
-            //http://k_krylov_n:7070/0/rest/WorkshopWebService/GetFilteredContacts?qt=0&email=a.baker@ac.com	
+            //http://k_krylov_n:7070/0/rest/WorkshopWebService/GetFilteredContacts?qt=0&email=k.krylov@creatio.com
             Timer.Start();
             Tuple<DataTable, string> result;
             switch (qt)

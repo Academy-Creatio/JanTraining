@@ -118,7 +118,8 @@ namespace WorkshopWorkingWithData.Files.DataOperations
             esqResult.AddColumn("Email");
             esqResult.AddColumn("Phone");
 
-            IEntitySchemaQueryFilterItem filterByEmail = esqResult.CreateFilterWithParameters(FilterComparisonType.Equal, "Email", email);
+            IEntitySchemaQueryFilterItem filterByEmail = esqResult.CreateFilterWithParameters(
+                FilterComparisonType.Equal, "Email", email);
             esqResult.Filters.Add(filterByEmail);
 
             Select select = esqResult.GetSelectQuery(UserConnection);
@@ -139,10 +140,9 @@ namespace WorkshopWorkingWithData.Files.DataOperations
             }
             else if (UserConnection.DBEngine.DBEngineType == DBEngineType.PostgreSql)
 			{
-                custom = new CustomQuery(UserConnection, $"" +
-                    $"Select \"Id\", \"Name\", \"Phone\", \"Email\" " +
+                custom = new CustomQuery(UserConnection, $"Select \"Id\", \"Name\", \"Phone\", \"Email\" " +
                     $"from public.\"Contact\" " +
-                    $"where public.\"Email\" ='{email}'");
+                    $"where \"Email\" ='{email}'");
             }
             else
             {
@@ -215,7 +215,8 @@ namespace WorkshopWorkingWithData.Files.DataOperations
             EntitySchemaQuery esqResult = new EntitySchemaQuery(UserConnection.EntitySchemaManager, tableName);
             esqResult.AddColumn("Owner.Id");
             esqResult.AddColumn("Owner.Name");
-            var durationInMinutes = esqResult.CreateAggregationFunction(AggregationTypeStrict.Sum, "DurationInMinutes");
+            var durationInMinutes = esqResult.CreateAggregationFunction(
+                AggregationTypeStrict.Sum, "DurationInMinutes");
             durationInMinutes.Name = "DurationInMinutes";
             esqResult.AddColumn(durationInMinutes);
             

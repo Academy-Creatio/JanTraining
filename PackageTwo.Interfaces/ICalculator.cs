@@ -24,7 +24,7 @@
 
 	public interface IMessage
 	{
-		public void SendMessageToAll(string sender, string message);
+		void SendMessageToAll(string sender, string message);
 	}
 
 

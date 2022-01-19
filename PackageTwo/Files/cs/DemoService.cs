@@ -1,8 +1,10 @@
-﻿using System;
+﻿using PackageTwo.Interfaces;
+using System;
 using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
 using Terrasoft.Core;
+using Terrasoft.Core.Factories;
 using Terrasoft.Web.Common;
 
 namespace PackageTwo
@@ -36,7 +38,7 @@ namespace PackageTwo
 			return "Ok";
 		}
 
-		// http://k_ktylov_n:7070/0/rest/CreatioWsTemplate/GetMethodName
+		// http://k_ktylov_n:7070/0/rest/CreatioWsTemplate/GetMethodName?a=1&b=10
 		[OperationContract]
 		[WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped, ResponseFormat = WebMessageFormat.Json)]
 		public string GetMethodname(int a, int b)
@@ -44,6 +46,9 @@ namespace PackageTwo
 			UserConnection userConnection = UserConnection ?? SystemUserConnection;
 
 			var c = new Calculator(UserConnection);
+
+			var conf = ClassFactory.Get<IConfToClio>();
+			conf.PostMessageToAll("Web service", "Message here !!!!");
 
 
 			return $"Ok {c.Add(a, b)}";

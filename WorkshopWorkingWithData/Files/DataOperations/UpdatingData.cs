@@ -31,11 +31,16 @@ namespace WorkshopWorkingWithData.Files.DataOperations
             const string tableName = "Contact";
             EntitySchema contactSchema = UserConnection.EntitySchemaManager.GetInstanceByName(tableName);
             Entity contact = contactSchema.CreateEntity(UserConnection);
-            contact.FetchFromDB(ContactId);
 
-            contact.SetColumnValue("Name", contact.GetTypedColumnValue<string>("Name")+" "+NewName);
-            if (contact.UpdateInDB())
-                return "Updated";
+			if (contact.FetchFromDB(ContactId))
+			{
+                contact.SetColumnValue("Name", contact.GetTypedColumnValue<string>("Name")+" "+NewName);
+                
+                if (contact.UpdateInDB())
+                    return "Updated";
+
+			}
+
             return "Failed";
         }
     }

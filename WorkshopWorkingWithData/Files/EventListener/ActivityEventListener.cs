@@ -26,8 +26,8 @@ namespace WorkshopWorkingWithData.Files.EventListener
             //Check if columns changed are the ones I care about
             if (!entity.IsChangeInteresting(InterestingColumns)) return;
 
-            //if (CountOverlappingActivitiesEsq(entity) != 0)
-            if (CountOverlappingActivitiesSelect(entity) != 0)
+            if (CountOverlappingActivityEsq(entity) != 0)
+            //if (CountOverlappingActivitiesSelect(entity) != 0)
             {
                 e.IsCanceled = true;
                 string message = entity.GetLocalizableString("OverlappingActivitiesFoundMessage", GetType().Name);
@@ -35,6 +35,7 @@ namespace WorkshopWorkingWithData.Files.EventListener
             }
         }
 
+        //commit to db
 
         public override void OnSaved(object sender, EntityAfterEventArgs e)
         {
