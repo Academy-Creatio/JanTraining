@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="EventsProcessSchema.BaseElements.EventSubProcess_OnContactInserting.Caption" Value="ContactInserting" />
+			<Item Name="EventsProcessSchema.BaseElements.EventSubProcess_OnContactValidating.Caption" Value="on ContactValidating" />
+			<Item Name="EventsProcessSchema.BaseElements.ScriptTask_SetDefValues.Caption" Value="Set def values" />
+			<Item Name="EventsProcessSchema.BaseElements.ScriptTask_ValidateEmail.Caption" Value="Validate Email" />
+			<Item Name="EventsProcessSchema.BaseElements.StartMessage4_1024449e10684b81a05a921fdbbd6855.Caption" Value="on ContactInserting" />
+			<Item Name="EventsProcessSchema.BaseElements.StartMessage5_2b0e823310354b2b87f967eb78900029.Caption" Value="on ContactValidating" />
+			<Item Name="EventsProcessSchema.Caption" Value="Contact" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet_b5765c396e294e9b86db1126b8e7d02b.Caption" Value="LaneSet 1" />
+			<Item Name="EventsProcessSchema.LaneSets.LaneSet_b5765c396e294e9b86db1126b8e7d02b.Lanes.Lane_d1094be9252c4580ac47ef31caea9fdc.Caption" Value="Lane 1" />
+		</Items>
+	</Group>
+</Resources>

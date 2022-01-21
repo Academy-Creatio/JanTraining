@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Web.SessionState;
 using Terrasoft.Core;
 using Terrasoft.Web.Common;
 using WorkshopWorkingWithData.Files.DataOperations;
@@ -14,7 +15,7 @@ namespace WorkshopWorkingWithData
 {
     [ServiceContract]
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
-    public class WorkshopWebService : BaseService
+    public class WorkshopWebService : BaseService, IReadOnlySessionState
     {
         private ReadingData ReadingData { get; set; }
         private UpdatingData UpdatingData { get; set; }
