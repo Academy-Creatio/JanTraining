@@ -26,8 +26,4 @@
 	{
 		void SendMessageToAll(string sender, string message);
 	}
-
-
-
-
 }

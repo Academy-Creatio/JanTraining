@@ -32,10 +32,6 @@ namespace PackageThree.EventListener
 			//to value
 			var newEmail = entity.GetTypedColumnValue<string>("Email");
 			
-
-
-
-
 			//Event subscribtion
 			entity.Validating += Entity_Validating;
 			
@@ -51,19 +47,16 @@ namespace PackageThree.EventListener
 			UserConnection userConnection = entity.UserConnection;
 
 			string phone = entity.GetTypedColumnValue<string>("Phone");
-
-
-
-			if (phone.Contains("555"))
-			{
-				EntityValidationMessage evm = new EntityValidationMessage
-				{
-					Text = "Phone may not contain 444",
-					MassageType = Terrasoft.Common.MessageType.Error,
-					Column = entity.Schema.Columns.FindByName("Email")
-				};
-				entity.ValidationMessages.Add(evm);
-			}
+			//if (phone.Contains("555"))
+			//{
+			//	EntityValidationMessage evm = new EntityValidationMessage
+			//	{
+			//		Text = "Phone may not contain 444",
+			//		MassageType = Terrasoft.Common.MessageType.Error,
+			//		Column = entity.Schema.Columns.FindByName("Email")
+			//	};
+			//	entity.ValidationMessages.Add(evm);
+			//}
 		}
 
 		public override void OnSaved(object sender, EntityAfterEventArgs e)
@@ -71,13 +64,7 @@ namespace PackageThree.EventListener
 			base.OnSaved(sender, e);
 			Entity entity = (Entity)sender;
 			UserConnection userConnection = entity.UserConnection;
-
-
-			var email = entity.GetTypedColumnValue<string>("Email");
-
-
-			
-			entity.SetColumnValue("VMOGithubProfile", "Value from Github here");			
+			//var email = entity.GetTypedColumnValue<string>("Email");
 		}
 		
 	}

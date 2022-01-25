@@ -21,6 +21,7 @@
 - [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/2351701-7ac6b9e8-afde-4260-baf1-3e6d8177acf1?action=collection%2Ffork&collection-url=entityId%3D2351701-7ac6b9e8-afde-4260-baf1-3e6d8177acf1%26entityType%3Dcollection%26workspaceId%3D2db9bb58-2e58-40d2-8e49-7881a99d9962#?env%5BDevTraining%5D=W3sia2V5IjoiQmFzZVVyaSIsInZhbHVlIjoiaHR0cDovL2tfa3J5bG92OjcwNzAvIiwiZW5hYmxlZCI6dHJ1ZX0seyJrZXkiOiJVc2VyTmFtZSIsInZhbHVlIjoiU3VwZXJ2aXNvciIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiVXNlclBhc3N3b3JkIiwidmFsdWUiOiJTdXBlcnZpc29yIiwiZW5hYmxlZCI6dHJ1ZX0seyJrZXkiOiJCUE1DU1JGIiwidmFsdWUiOiIiLCJlbmFibGVkIjp0cnVlfV0=)
 - [Import Visual Studio][vsTpl] Templates provided in VisualStudioTemplate folder.
 	- [vsUrlTpl] Find Template location ![Image](/Images/VS_ItemTemplate.png)
+- [IdentityService][IdentityService] for Creatio 
 
 
 ## SESSION VIDEO RECODING
@@ -30,8 +31,8 @@
 |2|[Video][d2v]|
 |3|[Video][d3v]|
 |4|[Video][d4v]|
-<!-- 
 |5|[Video][d5v]|
+<!-- 
 |6|[Video][d6v]|
 |7|[Video][d7v]|
 |8|[Video][d8v]| 
@@ -55,6 +56,8 @@ Thank you for having taken development training with me. In order to make this c
 [d2v]: https://creatio-global.zoom.us/rec/share/oaFj7XNZ8wBQjR1nGcbLaEdA0L40Qj5BL-hFkT4GtFgVkWQvNVHcvLBWhRS2MtYk.RUnarBk5niW6s9T0
 [d3v]:https://creatio-global.zoom.us/rec/share/Jk8h0pGB6qQlsXNGOBG-VRkgm8WKjgiDJ48f6bVRLlttELBlpSlAPuxD4ZBm83UU.qeIuZTT7dHbruUlJ
 [d4v]:https://creatio-global.zoom.us/rec/share/wtvFHsNXv4jllyQKmKwTYj2QcEAM-E6BsQtVZMY-07S_y-TBTrNfJtJ9anfIWNZs.WeV2BR3gucrqUQsR
+[d5v]: https://creatio-global.zoom.us/rec/share/wwWxz3RY8X4EVSEu5JIdoK9dm21w41js9TgYqQj-HmyZNq-K4VX6EQTIYClV469w.ca0a69AQCm8peFw2
+
 
 
 <!-- Links -->
@@ -71,3 +74,4 @@ Thank you for having taken development training with me. In order to make this c
 [fetchFromDb]: https://academy.creatio.com/api/netcoreapi/7.15.0/index.html#Terrasoft.Core~Terrasoft.Core.Entities.Entity~FetchFromDB.html
 [feedBackForm]:https://forms.office.com/Pages/ResponsePage.aspx?id=-6Jce0OmhUOLOTaTQnDHFs1n4KjdfnVBtjvFqBN3Vk9UNTdVREtLSVo0TlBGSlFRRUM0Sk1WWTdNTi4u
 [custom_web_service]: https://academy.creatio.com/docs/developer/back_end_development/web_services/overview#title-1243-1
+[IdentityService]: https://github.com/Academy-Creatio/Episode-9
