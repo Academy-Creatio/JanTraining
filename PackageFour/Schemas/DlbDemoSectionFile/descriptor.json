@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "03629c27-bb7c-49cb-ab18-79f4693b3f63",
+    "Name": "DlbDemoSectionFile",
+    "ModifiedOnUtc": "\/Date(1643124331000)\/",
+    "Parent": {
+      "UId": "556c5867-60a7-4456-aae1-a57a122bef70",
+      "Name": "File"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "DemoSection attachment"
+  }
+}

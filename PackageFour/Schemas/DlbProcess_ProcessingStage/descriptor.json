@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "2fa806af-6545-4185-add8-1968610976a6",
+    "Name": "DlbProcess_ProcessingStage",
+    "ModifiedOnUtc": "\/Date(1643171671000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Processing_Stage"
+  }
+}

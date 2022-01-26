@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "6c5c4e18-ae9a-4813-80d1-3fc75f9c9e08",
+    "Name": "DlbDemoSectionFolder",
+    "ModifiedOnUtc": "\/Date(1643124341000)\/",
+    "Parent": {
+      "UId": "d602bf96-d029-4b07-9755-63c8f5cb5ed5",
+      "Name": "BaseFolder"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "DemoSection folder"
+  }
+}

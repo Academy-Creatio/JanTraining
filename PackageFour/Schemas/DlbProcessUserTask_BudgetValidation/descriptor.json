@@ -1,0 +1,9 @@
+﻿{
+  "Descriptor": {
+    "UId": "b08efe8b-71d0-4dc5-a7fa-c82a2aa16c14",
+    "Name": "DlbProcessUserTask_BudgetValidation",
+    "ModifiedOnUtc": "\/Date(1643171455000)\/",
+    "ManagerName": "ProcessUserTaskSchemaManager",
+    "Caption": "Budget Validation"
+  }
+}

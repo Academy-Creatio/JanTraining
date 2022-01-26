@@ -22,7 +22,8 @@
 - [Import Visual Studio][vsTpl] Templates provided in VisualStudioTemplate folder.
 	- [vsUrlTpl] Find Template location ![Image](/Images/VS_ItemTemplate.png)
 - [IdentityService][IdentityService] for Creatio 
-
+- [Custom process Element][cpe]
+- Create [busines process element][busines process element] article
 
 ## SESSION VIDEO RECODING
 |Day|Download Link|
@@ -57,7 +58,7 @@ Thank you for having taken development training with me. In order to make this c
 [d3v]:https://creatio-global.zoom.us/rec/share/Jk8h0pGB6qQlsXNGOBG-VRkgm8WKjgiDJ48f6bVRLlttELBlpSlAPuxD4ZBm83UU.qeIuZTT7dHbruUlJ
 [d4v]:https://creatio-global.zoom.us/rec/share/wtvFHsNXv4jllyQKmKwTYj2QcEAM-E6BsQtVZMY-07S_y-TBTrNfJtJ9anfIWNZs.WeV2BR3gucrqUQsR
 [d5v]: https://creatio-global.zoom.us/rec/share/wwWxz3RY8X4EVSEu5JIdoK9dm21w41js9TgYqQj-HmyZNq-K4VX6EQTIYClV469w.ca0a69AQCm8peFw2
-
+[d6v]:https://creatio-global.zoom.us/rec/share/Nh9tYJ_Yc28_jC-QOhjfDIiUKiwB-s4wZb0eC4lUehkXo_DZdf_02tGmDqLuOSUu.3ZUT67pKkJjnSNac
 
 
 <!-- Links -->
@@ -75,3 +76,6 @@ Thank you for having taken development training with me. In order to make this c
 [feedBackForm]:https://forms.office.com/Pages/ResponsePage.aspx?id=-6Jce0OmhUOLOTaTQnDHFs1n4KjdfnVBtjvFqBN3Vk9UNTdVREtLSVo0TlBGSlFRRUM0Sk1WWTdNTi4u
 [custom_web_service]: https://academy.creatio.com/docs/developer/back_end_development/web_services/overview#title-1243-1
 [IdentityService]: https://github.com/Academy-Creatio/Episode-9
+
+[cpe]:https://www.youtube.com/watch?v=qYzMWkCj414&t=4139s
+[busines process element]: https://academy.creatio.com/docs/7-17/developer/front-end_development/creatio_development_cases/business_processes/creating_custom__%5Buser_task%5D_process_element

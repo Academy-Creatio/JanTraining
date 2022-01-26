@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "2858fb41-5cbe-4cb2-bd3d-104898e2d470",
+    "Name": "DlbDemoSectionStatus",
+    "ModifiedOnUtc": "\/Date(1643124315000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Demo Section Status"
+  }
+}

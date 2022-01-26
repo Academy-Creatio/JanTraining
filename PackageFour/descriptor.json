@@ -1,0 +1,16 @@
+﻿{
+  "Descriptor": {
+    "UId": "e9fe124d-1422-05fa-0d4f-47b65638a7ba",
+    "Name": "PackageFour",
+    "ModifiedOnUtc": "\/Date(1643124112000)\/",
+    "Maintainer": "Customer",
+    "Description": "LowCode and Code",
+    "DependsOn": [
+      {
+        "UId": "2fabaf6c-0f92-4530-aef8-40345c021da2",
+        "PackageVersion": "7.8.0",
+        "Name": "ProductCore"
+      }
+    ]
+  }
+}
