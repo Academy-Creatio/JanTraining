@@ -33,8 +33,8 @@
 |3|[Video][d3v]|
 |4|[Video][d4v]|
 |5|[Video][d5v]|
-<!-- 
 |6|[Video][d6v]|
+<!-- 
 |7|[Video][d7v]|
 |8|[Video][d8v]| 
 
