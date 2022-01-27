@@ -1,7 +1,39 @@
 define("DlbDemoSectionPage", [], function() {
 	return {
 		entitySchemaName: "DlbDemoSection",
-		attributes: {},
+		attributes: {
+
+			"CreatedBy": {
+				lookupListConfig: {
+					columns: ["Email", "Phone", "Account.Name"]
+				}
+			},
+
+			"MyEvents": {
+				dependencies: [
+					{
+						columns: ["DlbName"],
+						methodName: "onDlbNameChanged"
+					},
+					{
+						columns: ["DlbStatus"],
+						methodName: "onDlbStatusChanged"
+					}
+				]
+			},
+
+
+			/**
+			 * Object with current account information.
+			*/
+			"MyVirtualColumn": {
+				"type": Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
+				"dataValueType": Terrasoft.DataValueType.TEXT,
+				"caption": "My Virtual Column",
+				"value": "Unset value"
+			},
+
+		},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{
 			"Files": {
@@ -14,12 +46,95 @@ define("DlbDemoSectionPage", [], function() {
 			}
 		}/**SCHEMA_DETAILS*/,
 		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
-		methods: {},
+		methods: {
+			
+
+			/**
+			 * @inheritdoc Terrasoft.BaseSchemaViewModel#init
+			 * @overridden
+			 */
+			 init: function() {
+				this.callParent(arguments);
+				debugger;
+			 },
+
+
+			/**
+			 * @inheritdoc Terrasoft.BasePageV2#onEntityInitialized
+			 * @overridden
+			 * @protected
+			 */
+			 onEntityInitialized: function() {
+				this.callParent(arguments);
+				debugger;
+				var name = this.get("DlbName");
+			},
+			
+
+			onDlbNameChanged: function(a, columnChanged){
+				this.set(
+					"MyVirtualColumn",
+					Ext.String.format("The length is {0}", this.$DlbName.length)
+				);
+			},
+			
+			onDlbStatusChanged: function(a, columnChanged){
+				var dv = this.$DlbStatus.displayValue;
+				this.set("MyVirtualColumn",dv);
+			},
+
+
+
+			/**
+			 * @inheritdoc Terrasoft.BaseSchemaViewModel#setValidationConfig
+			 * @override
+			 */
+			setValidationConfig: function() {
+				this.callParent(arguments);
+				this.addColumnValidator("DlbName", this.dlbNameValidator);
+			},
+
+
+			/**
+			 * Validates Name, no less than 7 characters
+			 * @protected
+			 * @return {Object} Validation result info.
+			 */
+			 dlbNameValidator: function() {
+				var invalidMessage = "";
+				if (this.$DlbName.length < 7){
+					//invalidMessage = "Name has to be 7 characters long or longer";
+					invalidMessage = this.get("Resources.Strings.InvalidNameMessage");
+				}else{
+					invalidMessage="";
+				}
+				
+				return {
+					invalidMessage: invalidMessage
+				};
+			},
+			
+			/**
+			 * Checks, DlbName contacins more than 5 symbols
+			 * @return {Boolean} Menu item enabled.
+			 */
+			 isDlbNameTwoEnabled: function() {
+				// debugger;
+				// //var name = this.get("DlbName");
+				// var name = this.$DlbName;
+				
+				// if(name & name.length>5){
+				// 	return true;
+				// }else{
+				// 	return false;
+				// }
+			},
+		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
 			{
 				"operation": "insert",
-				"name": "DlbName007f61eb-8885-4c25-9063-ed5b18a5086b",
+				"name": "DlbName",
 				"values": {
 					"layout": {
 						"colSpan": 24,
@@ -36,7 +151,7 @@ define("DlbDemoSectionPage", [], function() {
 			},
 			{
 				"operation": "insert",
-				"name": "LOOKUP1a1c6143-e603-47b0-8ea4-78f6c35513d6",
+				"name": "DlbStatus",
 				"values": {
 					"layout": {
 						"colSpan": 24,
@@ -55,10 +170,10 @@ define("DlbDemoSectionPage", [], function() {
 			},
 			{
 				"operation": "insert",
-				"name": "NotesAndFilesTab",
+				"name": "TabMyTabLabel",
 				"values": {
 					"caption": {
-						"bindTo": "Resources.Strings.NotesAndFilesTabCaption"
+						"bindTo": "Resources.Strings.TabMyTabLabelTabCaption"
 					},
 					"items": [],
 					"order": 0
@@ -66,6 +181,87 @@ define("DlbDemoSectionPage", [], function() {
 				"parentName": "Tabs",
 				"propertyName": "tabs",
 				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "TabMyTabLabelMyFieldGroup",
+				"values": {
+					"caption": {
+						"bindTo": "Resources.Strings.TabMyTabLabelMyFieldGroupGroupCaption"
+					},
+					"itemType": 15,
+					"markerValue": "added-group",
+					"items": []
+				},
+				"parentName": "TabMyTabLabel",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "TabMyTabLabelGridLayoutefc637bc",
+				"values": {
+					"itemType": 0,
+					"items": []
+				},
+				"parentName": "TabMyTabLabelMyFieldGroup",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "DlbNameTwo",
+				"values": {
+					"layout": {
+						"colSpan": 12,
+						"rowSpan": 1,
+						"column": 6,
+						"row": 1,
+						"layoutName": "TabMyTabLabelGridLayoutefc637bc"
+					},
+					"visible": true,
+					"enabled": {
+						bindTo: 'isDlbNameTwoEnabled'
+					},
+					"bindTo": "DlbName"
+				},
+				"parentName": "TabMyTabLabelGridLayoutefc637bc",
+				"propertyName": "items",
+				"index": 1
+			},
+
+			{
+				"operation": "insert",
+				"name": "VirtualColumn",
+				"values": {
+					"layout": {
+						"colSpan": 12,
+						"rowSpan": 1,
+						"column": 6,
+						"row": 0,
+						"layoutName": "TabMyTabLabelGridLayoutefc637bc"
+					},
+					"bindTo": "MyVirtualColumn"
+				},
+				"parentName": "TabMyTabLabelGridLayoutefc637bc",
+				"propertyName": "items",
+				"index": 0
+			},
+
+
+			{
+				"operation": "insert",
+				"name": "NotesAndFilesTab",
+				"values": {
+					"caption": {
+						"bindTo": "Resources.Strings.NotesAndFilesTabCaption"
+					},
+					"items": [],
+					"order": 1
+				},
+				"parentName": "Tabs",
+				"propertyName": "tabs",
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -123,7 +319,7 @@ define("DlbDemoSectionPage", [], function() {
 				"operation": "merge",
 				"name": "ESNTab",
 				"values": {
-					"order": 1
+					"order": 2
 				}
 			}
 		]/**SCHEMA_DIFF*/

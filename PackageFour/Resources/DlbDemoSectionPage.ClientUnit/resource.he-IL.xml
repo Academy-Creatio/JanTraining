@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Edit page: &quot;DemoSection&quot;" />
+			<Item Name="LocalizableStrings.InvalidNameMessage.Value" Value="השם צריך להיות באורך של 7 תווים או יותר" />
 		</Items>
 	</Group>
 </Resources>
