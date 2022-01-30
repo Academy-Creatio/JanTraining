@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Time Tracking" />
+			<Item Name="Columns.DlbContact.Caption" Value="Contact" />
+			<Item Name="Columns.DlbDlbDemoSection.Caption" Value="Demo Section" />
+			<Item Name="Columns.DlbDurationFormated.Caption" Value="Duration Formated" />
+			<Item Name="Columns.DlbDurationInSeconds.Caption" Value="Duration In Seconds" />
+			<Item Name="Columns.DlbEndTime.Caption" Value="End Date/Time" />
+			<Item Name="Columns.DlbName.Caption" Value="Name" />
+			<Item Name="Columns.DlbStartTime.Caption" Value="Start Date/Time" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "2d0517de-30bf-4e06-81a0-3524f72ecae5",
+    "Name": "DlbSchemaa4ba4c12Detail",
+    "ModifiedOnUtc": "\/Date(1643297044000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Detail schema: \"Time Tracking\""
+  }
+}

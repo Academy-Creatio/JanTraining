@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "bc2225f1-5443-4b69-b376-10c854026d87",
+    "Name": "DlbTimeTracking",
+    "ModifiedOnUtc": "\/Date(1643298048000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Time Tracking"
+  }
+}

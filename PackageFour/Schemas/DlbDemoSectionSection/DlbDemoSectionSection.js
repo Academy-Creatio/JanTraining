@@ -1,8 +1,10 @@
-define("DlbDemoSectionSection", [], function() {
+define("DlbDemoSectionSection", ["ProcessModuleUtilities"], function(ProcessModuleUtilities) {
 	return {
 		entitySchemaName: "DlbDemoSection",
 		details: /**SCHEMA_DETAILS*/{}/**SCHEMA_DETAILS*/,
 		diff: /**SCHEMA_DIFF*/[
+
+			/**
 			{
 				"operation": "insert",
 				"parentName": "CombinedModeActionButtonsCardLeftContainer",
@@ -72,21 +74,93 @@ define("DlbDemoSectionSection", [], function() {
 					tag: "ActionButtonsContainer_Red"
 				}
 			},
+			*/
 			{
 				"operation": "insert",
-				"name": "activeRowActionSave",
+				"name": "activeRowActionStart",
 				"parentName": "DataGrid",
 				"propertyName": "activeRowActions",
 				"values": {
 					"className": "Terrasoft.Button",
-					"style": Terrasoft.controls.ButtonEnums.style.TRANSPARENT,
-					"tag": "save",
-					"markerValue": "save",
-					caption: "TEST BUTN"
+					"style": Terrasoft.controls.ButtonEnums.style.GREEN,
+					"tag": "start",
+					"markerValue": "start",
+					"caption": "START"
 				}
 			},
+			{
+				"operation": "insert",
+				"name": "activeRowActionEnd",
+				"parentName": "DataGrid",
+				"propertyName": "activeRowActions",
+				"values": {
+					"className": "Terrasoft.Button",
+					"style": Terrasoft.controls.ButtonEnums.style.RED,
+					"tag": "end",
+					"markerValue": "end",
+					"caption": "END"
+				}
+			}
 			
 		]/**SCHEMA_DIFF*/,
-		methods: {}
+		methods: {
+
+
+
+			onActiveRowAction: function(buttonTag, primaryColumnValue) {
+				switch (buttonTag) {
+					case "end":
+						this.test(primaryColumnValue);
+						break;
+					case "start":
+						this.start(primaryColumnValue);
+						break;
+				}
+			},
+
+
+
+			start: function(primaryColumnValue){
+
+
+				var args = {
+                    // The name of the process that needs to be launched.
+                    sysProcessName: "DlbProcess_99d7448",
+                    // The object with the ContactParameter incoming parameter value for the CustomProcess process.
+                    parameters: {
+                        RecordId: primaryColumnValue
+                    }
+                };
+                // Launch of the custom business process.
+                ProcessModuleUtilities.executeProcess(args);
+			},
+
+			end: function(primaryColumnValue){
+				debugger;
+			},
+
+			callCustomProcess: function() {
+				
+				
+				// Receiving the identifier of the account primary contact.
+                var contactParameter = this.get("PrimaryContact");
+                // The object that will be transferred to the executeProcess() method as an argument.
+                var args = {
+                    // The name of the process that needs to be launched.
+                    sysProcessName: "UsrCustomProcess",
+                    // The object with the ContactParameter incoming parameter value for the CustomProcess process.
+                    parameters: {
+                        ProcessSchemaContactParameter: contactParameter.value
+                    }
+                };
+                // Launch of the custom business process.
+                ProcessModuleUtilities.executeProcess(args);
+            }
+
+
+
+
+
+		}
 	};
 });

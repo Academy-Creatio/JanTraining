@@ -43,6 +43,14 @@ define("DlbDemoSectionPage", [], function() {
 					"masterColumn": "Id",
 					"detailColumn": "DlbDemoSection"
 				}
+			},
+			"DlbSchemaTimeTrackingDetail": {
+				"schemaName": "DlbSchemaa4ba4c12Detail",
+				"entitySchemaName": "DlbTimeTracking",
+				"filter": {
+					"detailColumn": "DlbDlbDemoSection",
+					"masterColumn": "Id"
+				}
 			}
 		}/**SCHEMA_DETAILS*/,
 		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
@@ -210,28 +218,6 @@ define("DlbDemoSectionPage", [], function() {
 			},
 			{
 				"operation": "insert",
-				"name": "DlbNameTwo",
-				"values": {
-					"layout": {
-						"colSpan": 12,
-						"rowSpan": 1,
-						"column": 6,
-						"row": 1,
-						"layoutName": "TabMyTabLabelGridLayoutefc637bc"
-					},
-					"visible": true,
-					"enabled": {
-						bindTo: 'isDlbNameTwoEnabled'
-					},
-					"bindTo": "DlbName"
-				},
-				"parentName": "TabMyTabLabelGridLayoutefc637bc",
-				"propertyName": "items",
-				"index": 1
-			},
-
-			{
-				"operation": "insert",
 				"name": "VirtualColumn",
 				"values": {
 					"layout": {
@@ -247,8 +233,38 @@ define("DlbDemoSectionPage", [], function() {
 				"propertyName": "items",
 				"index": 0
 			},
-
-
+			{
+				"operation": "insert",
+				"name": "DlbNameTwo",
+				"values": {
+					"layout": {
+						"colSpan": 12,
+						"rowSpan": 1,
+						"column": 6,
+						"row": 1,
+						"layoutName": "TabMyTabLabelGridLayoutefc637bc"
+					},
+					"visible": true,
+					"enabled": {
+						"bindTo": "isDlbNameTwoEnabled"
+					},
+					"bindTo": "DlbName"
+				},
+				"parentName": "TabMyTabLabelGridLayoutefc637bc",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "DlbSchemaTimeTrackingDetail",
+				"values": {
+					"itemType": 2,
+					"markerValue": "added-detail"
+				},
+				"parentName": "TabMyTabLabel",
+				"propertyName": "items",
+				"index": 1
+			},
 			{
 				"operation": "insert",
 				"name": "NotesAndFilesTab",

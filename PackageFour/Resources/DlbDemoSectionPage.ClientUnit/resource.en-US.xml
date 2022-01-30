@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Caption" Value="Edit page: &quot;DemoSection&quot;" />
+			<Item Name="LocalizableStrings.DlbSchemaTimeTrackingDetailDetailCaptionOnPage.Value" Value="Time Tracking" />
 			<Item Name="LocalizableStrings.InvalidNameMessage.Value" Value="Name has to be 7 characters long or longer" />
 			<Item Name="LocalizableStrings.TabMyTabLabelMyFieldGroupGroupCaption.Value" Value="MyFieldGroup" />
 			<Item Name="LocalizableStrings.TabMyTabLabelTabCaption.Value" Value="MyTab" />
