@@ -1,8 +1,8 @@
 ﻿{
   "Descriptor": {
-    "UId": "f5af119e-1c47-4f3f-819e-9a9abf2ee51e",
-    "Name": "SysModuleEdit_SysModuleEditManager_6d06044cc0364e0e985339bb72ea4f49",
-    "ModifiedOnUtc": "\/Date(1643298559000)\/",
+    "UId": "374b6460-0661-47fe-b74e-19856c5f6f6e",
+    "Name": "SysModuleEdit_SysModuleEditManager_3d5e4e8d4d7f4c97ad430fcf74469029",
+    "ModifiedOnUtc": "\/Date(1643296827000)\/",
     "InstallType": 0,
     "Schema": {
       "UId": "24666f2d-049f-4867-ae2c-db681c40c001",
@@ -102,7 +102,7 @@
       },
       {
         "ColumnUId": "a4fcaa97-6bfa-4e5e-a130-6a9515254107",
-        "IsForceUpdate": true,
+        "IsForceUpdate": false,
         "IsKey": false,
         "ColumnName": "MiniPageModes",
         "DataTypeValueUId": "325a73b8-0f47-44a0-8412-7606f78003ac"
